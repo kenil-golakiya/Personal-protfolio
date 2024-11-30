@@ -1,2 +1,2 @@
 # Personal-protfolio
-randomly
+randomly just like project
