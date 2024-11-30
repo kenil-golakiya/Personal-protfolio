@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="intro.html">My Intro</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Main Content Area -->
+        <div class="main">
+            <div class="form-container">
+                <h2>Contact me for work/general enqueiries</h2>
+                <form id="contactForm" onsubmit="return validateForm()">
+                    <label for="name" >Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <div id="nameError" class="error"></div>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <div id="emailError" class="error"></div>
+
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" name="phone" required>
+                    <div id="phoneError" class="error"></div>
+
+                    <label for="inquiry">Inquiry:</label>
+                    <textarea id="inquiry" name="inquiry" rows="4" required></textarea>
+                    <div id="inquiryError" class="error"></div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JS -->
+    <script src="index.js"></script>
+
+    <script>
+        function validateForm() {
+            // Clear previous error messages
+            document.getElementById('nameError').innerHTML = '';
+            document.getElementById('emailError').innerHTML = '';
+            document.getElementById('phoneError').innerHTML = '';
+            document.getElementById('inquiryError').innerHTML = '';
+
+            let isValid = true;
+
+            // Validate name (required)
+            const name = document.getElementById('name').value;
+            if (name.trim() === '') {
+                document.getElementById('nameError').innerHTML = 'Name is required.';
+                isValid = false;
+            }
+
+            // Validate email (required and must be a valid email)
+            const email = document.getElementById('email').value;
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (email.trim() === '') {
+                document.getElementById('emailError').innerHTML = 'Email is required.';
+                isValid = false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById('emailError').innerHTML = 'Please enter a valid email address.';
+                isValid = false;
+            }
+
+            // Validate phone (required and must be a valid phone number)
+            const phone = document.getElementById('phone').value;
+            const phonePattern = /^[0-9]{10}$/;
+            if (phone.trim() === '') {
+                document.getElementById('phoneError').innerHTML = 'Phone number is required.';
+                isValid = false;
+            } else if (!phonePattern.test(phone)) {
+                document.getElementById('phoneError').innerHTML = 'Please enter a valid phone number (10 digits).';
+                isValid = false;
+            }
+
+            // Validate inquiry (required)
+            const inquiry = document.getElementById('inquiry').value;
+            if (inquiry.trim() === '') {
+                document.getElementById('inquiryError').innerHTML = 'Please enter your inquiry.';
+                isValid = false;
+            }
+
+            // If all fields are valid, submit the form
+            return isValid;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    min-height: 375vh;
+    padding: 40px 30px;
+    margin-left: 40px;
+}
+
+.main {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #ffffff;
+    max-width: 1000px;
+    margin-left: 280px;
+    margin-right: 40px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.main:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.services-container {
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+.service {
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.service:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.service p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+strong {
+    color: #007BFF;
+    font-weight: 600;
+}
+
+a {
+    color: #ff4070;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    color: #f25f83;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 20px;
+    }
+
+    .main {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px;
+    }
+
+    .services-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .service {
+        padding: 15px;
+    }
+
+    .service h3 {
+        font-size: 24px;
+    }
+
+    .service p {
+        font-size: 16px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .main {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px;
+    }
+
+    .services-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .service {
+        padding: 20px;
+    }
+
+    .service h3 {
+        font-size: 26px;
+    }
+
+    .service p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 44px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .service {
+        padding: 25px;
+    }
+
+    .service h3 {
+        font-size: 28px;
+    }
+
+    .service p {
+        font-size: 19px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .main {
+        margin-left: 280px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .service {
+        padding: 30px;
+    }
+
+    .service h3 {
+        font-size: 30px;
+    }
+
+    .service p {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .main {
+        margin-left: 300px;
+        padding: 50px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    .service {
+        padding: 35px;
+    }
+
+    .service h3 {
+        font-size: 32px;
+    }
+
+    .service p {
+        font-size: 22px;
+    }
+}
